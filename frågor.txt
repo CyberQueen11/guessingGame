@@ -1,0 +1,10 @@
+#När använder man 'add' respektive 'commit'?
+You want to use 'git add' when you want to move your changes into the staging area where you can then commit...
+to commit means writing an explanatory message to what you have changed.
+
+#Vad är 'pull' respektiv 'push'?
+'push' and 'pull' are used when wanting to access remote repositories
+'git push' loads in data to a remote repository
+'git pull' fetches new commits/data from a remote repository into our own home repository
+
+#När använder man 'log' respektiv 'status'
