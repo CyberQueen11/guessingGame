@@ -34,10 +34,11 @@ along with the specified arguments explaining where you want to reset too in you
 Doing this will erase the history up until the specified working directory you wanted to reset to.
 
 'revert'
-Reverting your changes works the same BUT instead of erasing it doesn't erase anything in the history 
+Reverting your changes works the same BUT instead of erasing, it doesn't erase anything in the history 
 but adds a new commit with the given past working directory history.
 
-Here are some exmaples:
+
+# Here are some exmaples:
 
 'reset'
 $ git log --oneline
@@ -56,6 +57,38 @@ $ git switch main
 	Your branch is up to date with 'origin/main'.
 $ git log --oneline
 	d611b85 (HEAD -> main, origin/main, step-VG) explained revert and reset in frågor.txt file
+	a671d7d (step-5) answered questions 3 and 4
+	11ad104 answered the two first questions
+	cab04b1 (resetTest) created frågor.txt file
+	bc5ed21 (step-4) inserted into script - outputs, compiler, game runner and then removing class files
+
+
+
+'revert'
+$ git log --oneline
+	30dcdd0 (HEAD -> revertTest, origin/main, step-VG, main) made git reset example
+	d611b85 explained revert and reset in frågor.txt file
+	a671d7d (step-5) answered questions 3 and 4
+	11ad104 answered the two first questions
+	cab04b1 (resetTest) created frågor.txt file
+	bc5ed21 (step-4) inserted into script - outputs, compiler, game runner and then removing class files
+$ git revert HEAD
+	[revertTest 1f76ded] Revert "made git reset example"
+	1 file changed, 22 deletions(-)
+$ git log --oneline
+	1f76ded (HEAD -> revertTest) Revert "made git reset example"
+	30dcdd0 (origin/main, step-VG, main) made git reset example
+	d611b85 explained revert and reset in frågor.txt file
+	a671d7d (step-5) answered questions 3 and 4
+	11ad104 answered the two first questions
+	cab04b1 (resetTest) created frågor.txt file
+	bc5ed21 (step-4) inserted into script - outputs, compiler, game runner and then removing class files
+$ git switch main
+	Switched to branch 'main'
+	Your branch is up to date with 'origin/main'.
+$ git log --oneline
+	30dcdd0 (HEAD -> main, origin/main, step-VG) made git reset example
+	d611b85 explained revert and reset in frågor.txt file
 	a671d7d (step-5) answered questions 3 and 4
 	11ad104 answered the two first questions
 	cab04b1 (resetTest) created frågor.txt file
