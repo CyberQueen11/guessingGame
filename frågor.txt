@@ -1,17 +1,40 @@
-#När använder man 'add' respektive 'commit'?
+# När använder man 'add' respektive 'commit'?
 You want to use 'git add' when you want to move your changes into the staging area where you can then commit...
 to commit means writing an explanatory message to what you have changed.
 
-#Vad är 'pull' respektiv 'push'?
+# Vad är 'pull' respektiv 'push'?
 'push' and 'pull' are used when wanting to access remote repositories
 'git push' loads in data to a remote repository
 'git pull' fetches new commits/data from a remote repository into our own home repository
 
-#När använder man 'log' respektiv 'status'
+# När använder man 'log' respektiv 'status'
 'log' is used when you want to look in your commit history.
 To check if there is any modfied data or data that needs to be commited you can check the status of your current repository with the subcommand 'status'
 
-#Vad är en Git branch och varför är de viktiga?
+# Vad är en Git branch och varför är de viktiga?
 a git branch is a duplicated version of your current master repository.
 it's important to be able to duplicate your master if you want to be able to change files, fix bugs or test ideas without ruining your whole project in the main branch.
 Branches are also very useful in group projects. you both want to try out your changes and communicate your process without harming the base project. 
+
+
+
+
+
+# SIKTAR PÅ VG
+# Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. 
+# Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. 
+# Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, 
+# vilken output du fick från git-kommandona.
+# Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
+There are 2 ways to go back into earlier stages of your edits:
+
+'reset'
+When wanting to regret a change you have made you can easily reset that change with the subcommand reset 
+along with the specified arguments explaining where you want to reset too in your history. 
+Doing this will erase the history up until the specified working directory you wanted to reset to.
+
+'revert'
+Reverting your changes works the same BUT instead of erasing it doesn't erase anything in the history 
+but adds a new commit with the given past working directory history.
+
+Here are some exmaples:
