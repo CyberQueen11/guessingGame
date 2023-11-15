@@ -8,3 +8,10 @@ to commit means writing an explanatory message to what you have changed.
 'git pull' fetches new commits/data from a remote repository into our own home repository
 
 #När använder man 'log' respektiv 'status'
+'log' is used when you want to look in your commit history.
+To check if there is any modfied data or data that needs to be commited you can check the status of your current repository with the subcommand 'status'
+
+#Vad är en Git branch och varför är de viktiga?
+a git branch is a duplicated version of your current master repository.
+it's important to be able to duplicate your master if you want to be able to change files, fix bugs or test ideas without ruining your whole project in the main branch.
+Branches are also very useful in group projects. you both want to try out your changes and communicate your process without harming the base project. 
